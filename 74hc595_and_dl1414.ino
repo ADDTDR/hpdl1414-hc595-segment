@@ -51,7 +51,7 @@ void rotate_string_and_display(const std::string &str, int delay_ms) {
     std::string rotated_str = str;
     int cy =0;
     // Run indefinitely
-    while (cy < 50) {
+    while (cy < 85) {
         for (size_t i = 0; i < rotated_str.length(); ++i) {
             // Create a circular substring by appending the first characters at the end
             std::string display_str = rotated_str.substr(i, 8);
@@ -68,7 +68,7 @@ void rotate_string_and_display(const std::string &str, int delay_ms) {
 }
 
 std::string jokes[] = {
-    "I TOLD MY WIFE SHE WAS DRAWING HER EYEBROWS TOO HIGH. SHE LOOKED SURPRISED.",
+    "I TOLD MY WIFE SHE WAS DRAWING HER EYEBROWS TOO HIGH. SHE LOOKED SURPRISED.  ",
     "WHY DON’T SKELETONS FIGHT EACH OTHER? THEY DON’T HAVE THE GUTS.",
     "I WOULD AVOID THE SUSHI IF I WAS YOU. IT’S A LITTLE FISHY.",
     "WHAT’S ORANGE AND SOUNDS LIKE A PARROT? A CARROT.",
@@ -94,12 +94,12 @@ void loop() {
 // print_on_display("12345678");
 
   
-    int jokeIndex = random(0, sizeof(jokes) / sizeof(jokes[0]));
-    rotate_string_and_display(jokes[jokeIndex], 150);
+    // int jokeIndex = random(0, sizeof(jokes) / sizeof(jokes[0]));
+    // rotate_string_and_display(jokes[jokeIndex], 150);
 
-      // for (const std::string& joke : jokes) {
-        // rotate_string_and_display(joke, 150);
-      // }
+      for (const std::string& joke : jokes) {
+        rotate_string_and_display(joke, 120);
+      }
 
 
 
